@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ note.title }}</h1>
+    <p>{{ note.text }}</p>
+    <p class="text-muted">Created by {{ note.author.username }} on {{ note.created_date|date:"F d, Y" }}</p>
+    <h2>Shared with:</h2>
+    <ul>
+      {% for user in note.shared_with.all %}
+        <li>{{ user.username }}</li>
+      {% empty %}
+        <li>No one yet</li>
+      {% endfor %}
+    </ul>
+    {% if user.is_authenticated and user == note.author %}
+    <a href="{% url 'note_edit' pk=note.pk %}" class="btn-secondary">Edit</a>
+    <a href="{% url 'note_delete' pk=note.pk %}" class="btn-danger">Delete</a>
+    {% endif %}
+  </div>
+{% endblock %}

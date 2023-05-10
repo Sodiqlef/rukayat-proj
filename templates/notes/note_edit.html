@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 >{{ edit_title }}</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div >
+  {{ form.as_p }}
+    </div><br>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{% url 'note_detail' pk=note.pk %}" class=" btn-secondary">Cancel</a>
+  </form>
+{% endblock %}
