@@ -6,4 +6,4 @@ What are the next steps? Please read this document for more details on the assig
 
 Do not submit to Grader Than. Please make a screen recording demonstrating all of the functionality of your website. The screen recording video must include you working with all of the features outlined in the assignment details document. If the video does not demonstrate that your website can perform a particular feature you will receive a zero for that particular feature. Even if the feature has bugs please still demonstrate its partial functionality. You may upload more than one video. Please upload your video(s) to Moodle.   
 
-Please use your time wisely. Late submissions will not be accepted for this project.
+
